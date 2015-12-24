@@ -9,7 +9,8 @@ function something() {
     alert(x);
 }
 
-function add_to_card(id)
-{
-    alert("your added pizza with id" + id);
+function add_to_card(id) {
+    var x = window.localStorage.getItem('product_' + id);
+    window.localStorage.setItem('product_' + id, x * 1 + 1);
 }
+
